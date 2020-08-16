@@ -29,7 +29,7 @@ As a static code analysis developer team, we asked ourselves the following quest
 * how well do we track “hacker sent input values” across a software?
 * how well do we perform when finding different types of security and quality bugs?
 
-FlowBlot is static code analysis benchmark project by Codethreat, including sink-source challenges grouped into various technical analysis concepts, implemented as a helper for the first question above. 
+FlowBlot is static code analysis benchmark project by Codethreat, including sink-source challenges grouped into various technical analysis concepts, implemented as a helper to answer the first question.
 
 <!-- LICENSE -->
 ## License
