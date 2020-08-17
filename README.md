@@ -1,5 +1,5 @@
 
-# SAST Benchmark
+# SAST Data Flow Benchmark
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
