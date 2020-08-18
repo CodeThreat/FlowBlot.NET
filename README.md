@@ -48,7 +48,7 @@ CodeThreat Dev Team - [@threatcode](https://twitter.com/threatcode) - dev@codeth
 <!-- ACKNOWLEDGEMENTS -->
 ## References
 * [Introducing FlowBlot](https://medium.com/@codethreat/introducing-flowblot-d1594f688131)
-* [A Helper Spreadsheet] (https://docs.google.com/spreadsheets/d/1bpEf6xx95XXq6C3Mr3PfuFQ9XLxuQTDKMpHeaz5vbyI/edit?usp=sharing)
+* [A Helper Spreadsheet](https://docs.google.com/spreadsheets/d/1bpEf6xx95XXq6C3Mr3PfuFQ9XLxuQTDKMpHeaz5vbyI/edit?usp=sharing)
 
 
 
