@@ -1,5 +1,5 @@
 
-# SAST Data Flow Benchmark
+# SAST Taint Analysis Benchmark
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
