@@ -1,5 +1,5 @@
 
-# SAST Taint Analysis Benchmark
+# SAST Benchmark Tool for Taint Analysis
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
