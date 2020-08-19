@@ -24,12 +24,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-As a static code analysis developer team, we asked ourselves the following questions
+As a static code analysis development team, we asked ourselves the following questions
 
 * how well do we track “hacker sent input values” across a software?
 * how well do we perform when finding different types of security and quality bugs?
 
-FlowBlot is static code analysis benchmark project by CodeThreat, including sink-source challenges grouped into various technical analysis concepts, implemented as a helper to answer the first question. It's paramountly important for a static code analysis tool to perform its best to answer this question in order to produce quality results. 
+FlowBlot is static code analysis benchmark project by CodeThreat, including sink-source challenges grouped into various technical analysis concepts, implemented as a helper to answer the first question. It's paramountly important for a SAST tool to perform its best to answer this question in order to produce quality results. While other vulnerable applications like OWASP Benchmark, Juiceshop, DVWA etc. contain different vulnerabilities, FlowBlot contains various cases of data flow instances grouped by program analysis technicals and language-specific complexities. If we have to explain what FlowBlot does in terms of DAST tools, FlowBlot benchmarks their crawler components, quality of which are extremely critical for finding security issues.
 
 <!-- LICENSE -->
 ## License
