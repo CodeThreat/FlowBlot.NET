@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58A95A57-19F5-4789-8570-17C4287B7984}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FlowBlot</RootNamespace>
+    <AssemblyName>FlowBlot</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Flows\Context-Sensitivity\Flow_00010.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00071.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00070.cs" />
+    <Compile Include="Flows\Lambda-Functions\Flow_00077.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00073.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00072.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00081.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00080.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00079.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00078.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00074.cs" />
+    <Compile Include="Flows\Multi-Source-Multi-Sink\Flow_00024.cs" />
+    <Compile Include="Flows\Multi-Source-Multi-Sink\Flow_00026.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00075.cs" />
+    <Compile Include="Flows\Polymorphism\Flow_00076.cs" />
+    <Compile Include="Flows\Simple\Flow_00011.cs" />
+    <Compile Include="Flows\PassByReference\Flow_00012.cs" />
+    <Compile Include="Flows\PassByReference\Flow_00013.cs" />
+    <Compile Include="Flows\Path-Sensitivity\Flow_00014.cs" />
+    <Compile Include="Flows\Path-Sensitivity\Flow_00015.cs" />
+    <Compile Include="Flows\Loops\Flow_00016.cs" />
+    <Compile Include="Flows\Recursion\Flow_00017.cs" />
+    <Compile Include="Flows\Nested-Calls\Flow_00018.cs" />
+    <Compile Include="Flows\Getter-Setter\Flow_00019.cs" />
+    <Compile Include="Flows\Simple\Flow_00002.cs" />
+    <Compile Include="Flows\Getter-Setter\Flow_00020.cs" />
+    <Compile Include="Flows\Polymorphism\Flow_00021.cs" />
+    <Compile Include="Flows\Polymorphism\Flow_00022.cs" />
+    <Compile Include="Flows\Multi-Source-Multi-Sink\Flow_00023.cs" />
+    <Compile Include="Flows\Multi-Source-Multi-Sink\Flow_00025.cs" />
+    <Compile Include="Flows\Path-Sensitivity\Flow_00027.cs" />
+    <Compile Include="Flows\Integer Casting\Flow_00028.cs" />
+    <Compile Include="Flows\PassByReference\Flow_00029.cs" />
+    <Compile Include="Flows\PassByReference\Flow_00030.cs" />
+    <Compile Include="Flows\Static-Variable\Flow_00031.cs" />
+    <Compile Include="Flows\Field-Sensitivity\Flow_00003.cs" />
+    <Compile Include="Flows\Field-Sensitivity\Flow_00069.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00068.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00067.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00048.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00047.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00046.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00045.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00032.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00033.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00034.cs" />
+    <Compile Include="Flows\Recursion\Flow_00035.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00036.cs" />
+    <Compile Include="Flows\Exceptions\Flow_00037.cs" />
+    <Compile Include="Flows\Exceptions\Flow_00038.cs" />
+    <Compile Include="Flows\String-Operations\Flow_00039.cs" />
+    <Compile Include="Flows\Unreachable Flow\Flow_00040.cs" />
+    <Compile Include="Flows\String-Operations\Flow_00041.cs" />
+    <Compile Include="Flows\Field-Sensitivity\Flow_00004.cs" />
+    <Compile Include="Flows\Regular Expression\Flow_00042.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00043.cs" />
+    <Compile Include="Flows\Miscellaneous\Flow_00044.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00066.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00065.cs" />
+    <Compile Include="Flows\Inline-Instantiations\Flow_00064.cs" />
+    <Compile Include="Flows\Inline-Instantiations\Flow_00063.cs" />
+    <Compile Include="Flows\Reflection\Flow_00062.cs" />
+    <Compile Include="Flows\Lambda-Functions\Flow_00061.cs" />
+    <Compile Include="Flows\Lambda-Functions\Flow_00060.cs" />
+    <Compile Include="Flows\Flow-Sensitivity\Flow_00059.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00058.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00057.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00056.cs" />
+    <Compile Include="Flows\Points-To-Analysis\Flow_00055.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00054.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00053.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00052.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00051.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00050.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00049.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00005.cs" />
+    <Compile Include="Flows\Aggregates\Flow_00006.cs" />
+    <Compile Include="Flows\Path-Sensitivity\Flow_00007.cs" />
+    <Compile Include="Flows\Path-Sensitivity\Flow_00008.cs" />
+    <Compile Include="Flows\Context-Sensitivity\Flow_00009.cs" />
+    <Compile Include="Model\Alphabet.cs" />
+    <Compile Include="Model\Blot.cs" />
+    <Compile Include="Model\BlotBag.cs" />
+    <Compile Include="Model\DataSource.cs" />
+    <Compile Include="Model\IShoppingCart.cs" />
+    <Compile Include="Model\IWeatherService.cs" />
+    <Compile Include="Model\Machine.cs" />
+    <Compile Include="Model\MProxy.cs" />
+    <Compile Include="Model\Robot.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Atlas.cs" />
+    <Compile Include="Flows\Simple\Flow_00001.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Flows\Heap-Abstraction\" />
+    <Folder Include="Flows\Obsolete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
