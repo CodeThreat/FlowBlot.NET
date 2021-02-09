@@ -155,8 +155,5 @@
     <Folder Include="Flows\Heap-Abstraction\" />
     <Folder Include="Flows\Obsolete\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="ToDo.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
