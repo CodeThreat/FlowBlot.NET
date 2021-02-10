@@ -6,12 +6,12 @@
 
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
-            /*FLOW:Flow_00001 - A Basic source to sink taint propagation:OS Command Injection:3:FIND_ISSUE:1:
+            /*FLOW:Flow_00001 - A Basic source to sink taint propagation:codethreat.flowblot.benchmark:3:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
     }
 }

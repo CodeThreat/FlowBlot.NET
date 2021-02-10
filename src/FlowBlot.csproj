@@ -137,6 +137,7 @@
     <Compile Include="Model\Blot.cs" />
     <Compile Include="Model\BlotBag.cs" />
     <Compile Include="Model\DataSource.cs" />
+    <Compile Include="Model\Framework.cs" />
     <Compile Include="Model\IShoppingCart.cs" />
     <Compile Include="Model\IWeatherService.cs" />
     <Compile Include="Model\Machine.cs" />
