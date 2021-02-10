@@ -88,6 +88,12 @@ namespace FlowBlot
             new Flow_00073().Run();
             new Flow_00074().Run();
             new Flow_00075().Run();
+            new Flow_00076().Run();
+            new Flow_00077().Run();
+            new Flow_00078().Run();
+            new Flow_00079().Run();
+            new Flow_00080().Run();
+            new Flow_00081().Run();
         }
     }
 }
