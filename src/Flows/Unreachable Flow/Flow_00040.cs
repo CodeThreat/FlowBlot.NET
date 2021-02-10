@@ -2,10 +2,6 @@
 {
     public class Flow_00040
     {
-        public const string ID = "00040"; 
-        public const string Description = "An unreachable taint flow";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             float x = 5.0f;
@@ -17,12 +13,12 @@
 
         private void NeverCalled()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
-            /*FLOW:Flow_00040 - An unreachable taint flow:OS Command Injection:3:FIND_ISSUE:1:
+            /*FLOW:Flow_00040 - An unreachable taint flow:codethreat.flowblot.benchmark:3:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
     }
 }

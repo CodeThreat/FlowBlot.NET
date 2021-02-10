@@ -4,22 +4,18 @@ namespace FlowBlot
 {
     public class Flow_00059
     {
-        public const string ID = "00059";
-        public const string Description = "A flow-sensitive FP taint propagation";
-        public const bool IsVulnerable = false;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             A a = new A();
             a.b = input;
             A b = new A();
 
-            /*FLOW:Flow_00059:OS Command Injection:0:NONE:0:
+            /*FLOW:Flow_00059 - A flow-sensitive FP taint propagation:codethreat.flowblot.benchmark:0:NONE:0:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(b.b);
+            FlowBlot.Model.Framework.Sink(b.b);
             b = a;
         }
     }

@@ -4,10 +4,6 @@ namespace FlowBlot.Flows
 {
     public class Flow_00075
     {
-        public const string ID = "00075"; 
-        public const string Description = "A points-to analysis taint propagation using an assign function";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             Blot blot1 = new Blot();
@@ -15,12 +11,12 @@ namespace FlowBlot.Flows
 
             Assign(blot1, blot2);
 
-            blot1.Name = System.Console.ReadLine();
+            blot1.Name = FlowBlot.Model.Framework.Source();
 
-            /*FLOW:Flow_00075 - A points-to analysis taint propagation using an assign function:OS Command Injection:0+:FIND_ISSUE:1:
+            /*FLOW:Flow_00075 - A points-to analysis taint propagation using an assign function:codethreat.flowblot.benchmark:0+:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(blot2.Name);
+            FlowBlot.Model.Framework.Sink(blot2.Name);
         }
 
 

@@ -2,17 +2,13 @@
 {
     public class Flow_00025
     {
-        public const string ID = "00025"; 
-        public const string Description = "A multi sink taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
-            /*FLOW:Flow_00025 - A multi sink taint propagation:OS Command Injection:3:FIND_ISSUE:1:
+            /*FLOW:Flow_00025 - A multi sink taint propagation:codethreat.flowblot.benchmark:3:FIND_ISSUE:1:
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
 
             new Flow_00026().Run(input);
         }

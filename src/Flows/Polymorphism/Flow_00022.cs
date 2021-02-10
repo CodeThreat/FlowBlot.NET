@@ -4,14 +4,10 @@ namespace FlowBlot.Flows
 {
     public class Flow_00022
     {
-        public const string ID = "00022"; 
-        public const string Description = "A inter-procedural polymorphic taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             Atlas atlas = new Atlas();
-            atlas.name = System.Console.ReadLine();
+            atlas.name = FlowBlot.Model.Framework.Source();
 
             Machine machine = Build(atlas);
 
@@ -19,10 +15,10 @@ namespace FlowBlot.Flows
 
 
 
-            /*FLOW:Flow_00022 - A inter-procedural polymorphic taint propagation:OS Command Injection:11:FIND_ISSUE:1:
+            /*FLOW:Flow_00022 - A inter-procedural polymorphic taint propagation:codethreat.flowblot.benchmark:11:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
 
         public Machine Build(Machine machine)

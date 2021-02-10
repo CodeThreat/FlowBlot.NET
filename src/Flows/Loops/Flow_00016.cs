@@ -4,10 +4,6 @@ namespace FlowBlot.Flows
 {
     public class Flow_00016
     {
-        public const string ID = "00016"; 
-        public const string Description = "A loop taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             int x = 10;
@@ -17,14 +13,14 @@ namespace FlowBlot.Flows
 
             while(x > y)
             {
-                input = System.Console.ReadLine();
+                input = FlowBlot.Model.Framework.Source();
                 y++;
             }
 
-            /*FLOW:Flow_00016 - A loop taint propagation:OS Command Injection:3:FIND_ISSUE:1:
+            /*FLOW:Flow_00016 - A loop taint propagation:codethreat.flowblot.benchmark:3:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
 
     }

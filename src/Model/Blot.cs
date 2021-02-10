@@ -20,7 +20,7 @@ namespace FlowBlot.Model
             }
             set
             {
-                this.label = value + System.Console.ReadLine();
+                this.label = value + FlowBlot.Model.Framework.Source();
             }
         }
 

@@ -9,13 +9,9 @@ namespace FlowBlot.Flows
 {
     public class Flow_00074
     {
-        public const string ID = "00074";
-        public const string Description = "A basic flow with threads";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             MyThread obj = new MyThread();
 
@@ -28,10 +24,10 @@ namespace FlowBlot.Flows
     {
         public void Consume(object input)
         {
-            /*FLOW:Flow_00074 - A basic flow with threads:OS Command Injection:5:FIND_ISSUE:1:
+            /*FLOW:Flow_00074 - A basic flow with threads:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start((string)input);
+            FlowBlot.Model.Framework.Sink((string)input);
         }
     }
 }

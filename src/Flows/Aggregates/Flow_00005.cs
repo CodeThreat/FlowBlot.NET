@@ -4,13 +4,9 @@ namespace FlowBlot
 {
     public class Flow_00005
     {
-        public const string ID = "00005";
-        public const string Description = "A List item taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
             List<string> inputs = new List<string>();
             inputs.Add(input);
             inputs.Add(string.Empty);
@@ -18,10 +14,10 @@ namespace FlowBlot
             if (inputs != null && inputs.Count > 0)
             {
 
-                /*FLOW:Flow_00005 - A List item taint propagation:OS Command Injection:4:FIND_ISSUE:1:
+                /*FLOW:Flow_00005 - A List item taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
                  *STEP_PATH:ABC
                  */
-                System.Diagnostics.Process.Start(inputs[0]);
+                FlowBlot.Model.Framework.Sink(inputs[0]);
             }
         }
     }

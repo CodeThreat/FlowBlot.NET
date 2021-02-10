@@ -2,13 +2,9 @@
 {
     public class Flow_00064
     {
-        public const string ID = "00064";
-        public const string Description = "An inline Array definition taint propagation";
-        public const bool IsVulnerable = true; 
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             string [] anArray = new string []
             {
@@ -17,10 +13,10 @@
                 System.String.Empty
             };
 
-            /*FLOW:Flow_00064 - An inline Array definition taint propagation:OS Command Injection:5:FIND_ISSUE:1:
+            /*FLOW:Flow_00064 - An inline Array definition taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(anArray[0]);
+            FlowBlot.Model.Framework.Sink(anArray[0]);
         }
     }
 }

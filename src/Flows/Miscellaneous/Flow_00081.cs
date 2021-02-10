@@ -2,13 +2,9 @@
 {
     public class Flow_00081
     {
-        public const string ID = "00081";
-        public const string Description = "A dynamic number of arguments method call";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();            
+            string input = FlowBlot.Model.Framework.Source();            
             RunMe(string.Empty, input, null, null);
         }
 
@@ -16,10 +12,10 @@
         {
             if (arguments != null)
             {
-                /*FLOW:Flow_00081 - A dynamic number of arguments method call:OS Command Injection:5:FIND_ISSUE:1:
+                /*FLOW:Flow_00081 - A dynamic number of arguments method call:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
                     *STEP_PATH:ABC
                     */
-                System.Diagnostics.Process.Start(arguments[0]);
+                FlowBlot.Model.Framework.Sink(arguments[0]);
             }
         }
     }

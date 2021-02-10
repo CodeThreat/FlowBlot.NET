@@ -2,14 +2,10 @@
 {
     public class Flow_00027
     {
-        public const string ID = "00027";
-        public const string Description = "A switch taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
-            string condition = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
+            string condition = FlowBlot.Model.Framework.Source();
 
             switch (condition)
             {
@@ -23,10 +19,10 @@
                     break;
             }
 
-            /*FLOW:Flow_00027 - A switch taint propagation:OS Command Injection:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00027 - A switch taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
     }
 }

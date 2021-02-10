@@ -4,15 +4,12 @@ namespace FlowBlot.Flows
 {
     public class Flow_00036
     {
-        public const string ID = "00036"; 
-        public const string Description = "A shuffling points-to analysis FP taint propagation";
         // flow insensitive points-to analysis lead to FP
         // in other words; non-deterministic choice of the if branch and may-alias points-to analysis leads to FP
-        public const bool IsVulnerable = false;
 
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             A b, q, y;
             B a, p, x;
@@ -37,10 +34,10 @@ namespace FlowBlot.Flows
             x.attr = y;
             q.b = input;
 
-            /*FLOW:Flow_00036 - A shuffling points-to analysis FP taint propagation:OS Command Injection:0:NONE:0:0
+            /*FLOW:Flow_00036 - A shuffling points-to analysis FP taint propagation:codethreat.flowblot.benchmark:0:NONE:0:0
             *STEP_PATH:ABC
             */
-            System.Diagnostics.Process.Start(a.attr.b);
+            FlowBlot.Model.Framework.Sink(a.attr.b);
         }
 
     }

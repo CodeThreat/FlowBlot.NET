@@ -4,10 +4,6 @@ namespace FlowBlot.Flows
 {
     public class Flow_00048
     {
-        public const string ID = "00048"; 
-        public const string Description = "A complex points-to analysis FP taint propagation";
-        public const bool IsVulnerable = false;
-
         public void Run()
         {
             FirstDrill();
@@ -18,7 +14,7 @@ namespace FlowBlot.Flows
         {
             C a = new C();
             C b = new C();
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
             Mix(a, b, input);
         }
 
@@ -34,10 +30,10 @@ namespace FlowBlot.Flows
         {
             a.x = n;
 
-            /*FLOW:Flow_00048 - A complex points-to analysis FP taint propagation:OS Command Injection:0:NONE:0:
+            /*FLOW:Flow_00048 - A complex points-to analysis FP taint propagation:codethreat.flowblot.benchmark:0:NONE:0:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(b.x);
+            FlowBlot.Model.Framework.Sink(b.x);
         }
 
     }

@@ -5,14 +5,12 @@ namespace FlowBlot
 {
     public class Flow_00062
     {
-        public const string ID = "00062";
-        public const string Description = "A reflection taint propagation";
-        public const bool IsVulnerable = true; // This case, in fact, is neither true nor false. 
-                                               // For soundiness, it will be handled as true. 
+        // This case, in fact, is neither true nor false. 
+        // For soundiness, it will be handled as true. 
 
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             Assembly flowAssembly = Assembly.LoadFile(@"flow.dll");
             System.Type flowAssemblyType = flowAssembly.GetType("Flow.Fetcher");
@@ -27,10 +25,10 @@ namespace FlowBlot
 
             object output = getMethod.Invoke(flowInstance, arguments.ToArray());
 
-            /*FLOW:Flow_00062 - A reflection taint propagation:OS Command Injection:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00062 - A reflection taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(output.ToString());
+            FlowBlot.Model.Framework.Sink(output.ToString());
         }
     }
 }

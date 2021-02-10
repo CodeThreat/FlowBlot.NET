@@ -2,13 +2,9 @@
 {
     public class Flow_00039
     {
-        public const string ID = "00039"; 
-        public const string Description = "A StringBuilder taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             var sb = new System.Text.StringBuilder();
 
@@ -20,10 +16,10 @@
                 }
             }
 
-            /*FLOW:Flow_00039 - A StringBuilder taint propagation:OS Command Injection:7:FIND_ISSUE:1:
+            /*FLOW:Flow_00039 - A StringBuilder taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(sb.ToString());
+            FlowBlot.Model.Framework.Sink(sb.ToString());
         }
 
     }

@@ -2,10 +2,6 @@
 {
     public class Flow_00038
     {
-        public const string ID = "00038"; 
-        public const string Description = "An exception message taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             try
@@ -14,16 +10,16 @@
             }
             catch(System.Exception e)
             {
-              /*FLOW:Flow_00038 - An exception handler taint propagation:OS Command Injection:0+:FIND_ISSUE:1:
+              /*FLOW:Flow_00038 - An exception handler taint propagation:codethreat.flowblot.benchmark:0+:FIND_ISSUE:1:
               *STEP_PATH:ABC
               */
-                System.Diagnostics.Process.Start(e.Message);
+                FlowBlot.Model.Framework.Sink(e.Message);
             }
         }
 
         public void ThrowThat()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             throw new System.Exception(input);
         }

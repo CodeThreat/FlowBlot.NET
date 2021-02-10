@@ -2,13 +2,9 @@
 {
     public class Flow_00071
     {
-        public const string ID = "00071"; 
-        public const string Description = "A flow-sensitivity vs path-sensitivity FP taint propagation";
-        public const bool IsVulnerable = false;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             int a = 6;
             int b = 5;
@@ -18,10 +14,10 @@
                 input = System.String.Empty;
             }
 
-            /*FLOW:Flow_00071 - A flow-sensitivity vs path-sensitivity FP taint propagation:OS Command Injection:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00071 - A flow-sensitivity vs path-sensitivity FP taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
     }
 }

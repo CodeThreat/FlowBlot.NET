@@ -4,20 +4,16 @@ namespace FlowBlot.Flows
 {
     public class Flow_00020
     {
-        public const string ID = "00020"; 
-        public const string Description = "A setter FP taint propagation";
-        public const bool IsVulnerable = false;
-
         public void Run()
         {
             Blot blot = new Blot();
-            blot.Viscosity = System.Console.ReadLine();
+            blot.Viscosity = FlowBlot.Model.Framework.Source();
 
 
-            /*FLOW:Flow_00020 - A setter FP taint propagation:OS Command Injection:0:NONE:0:
+            /*FLOW:Flow_00020 - A setter FP taint propagation:codethreat.flowblot.benchmark:0:NONE:0:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(blot.Viscosity);
+            FlowBlot.Model.Framework.Sink(blot.Viscosity);
         }
 
     }

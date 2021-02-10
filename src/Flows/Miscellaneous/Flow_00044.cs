@@ -2,13 +2,9 @@
 {
     public class Flow_00044
     {
-        public const string ID = "00044"; 
-        public const string Description = "A source to sink complex trace order";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
             Method1(input);
         }
 
@@ -19,10 +15,10 @@
                 Method2(input);
             }
 
-            /*FLOW:Flow_00044 - A source to sink complex trace order:OS Command Injection:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00044 - A source to sink complex trace order:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(input);
+            FlowBlot.Model.Framework.Sink(input);
         }
 
         public void Method2(string input)

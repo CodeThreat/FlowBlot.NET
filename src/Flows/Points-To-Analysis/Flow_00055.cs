@@ -4,13 +4,9 @@ namespace FlowBlot
 {
     public class Flow_00055
     {
-        public const string ID = "00055";
-        public const string Description = "A basic alias analysis taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
 
             D a = new D();
             D b = new D();
@@ -20,10 +16,10 @@ namespace FlowBlot
             e.ReInitialize(b);
             D c = e.Get();
 
-            /*FLOW:Flow_00055 - A basic alias analysis taint propagation:OS Command Injection:0+:FIND_ISSUE:1:
+            /*FLOW:Flow_00055 - A basic alias analysis taint propagation:codethreat.flowblot.benchmark:0+:FIND_ISSUE:1:
               *STEP_PATH:ABC
               */
-            System.Diagnostics.Process.Start(c.x);
+            FlowBlot.Model.Framework.Sink(c.x);
         }
     }
 }

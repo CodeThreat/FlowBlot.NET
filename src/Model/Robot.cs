@@ -25,7 +25,7 @@ namespace FlowBlot.Model
 
         public override void Pause()
         {
-            name = System.Console.ReadLine();
+            name = FlowBlot.Model.Framework.Source();
         }
     }
 }

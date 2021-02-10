@@ -4,22 +4,18 @@ namespace FlowBlot.Flows
 {
     public class Flow_00043
     {
-        public const string ID = "00043"; 
-        public const string Description = "A model pass-through taint propagation";
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             Blot blot = new Blot();
-            string input = System.Console.ReadLine();
+            string input = FlowBlot.Model.Framework.Source();
             blot.Name = input;
             Method1(blot);
 
 
-            /*FLOW:Flow_00043 - A model pass-through taint propagation:OS Command Injection:15:FIND_ISSUE:2:
+            /*FLOW:Flow_00043 - A model pass-through taint propagation:codethreat.flowblot.benchmark:15:FIND_ISSUE:2:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(blot.Name);
+            FlowBlot.Model.Framework.Sink(blot.Name);
         }
 
         public void Method1(System.Object myobj)
