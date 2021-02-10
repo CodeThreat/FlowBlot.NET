@@ -2,8 +2,6 @@
 {
     public class Flow_00001
     {
-        public const bool IsVulnerable = true;
-
         public void Run()
         {
             string input = FlowBlot.Model.Framework.Source();
