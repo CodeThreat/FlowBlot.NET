@@ -10,15 +10,15 @@ namespace FlowBlot.Flows
             Blot blot = new Blot() { Name = String.Empty };
             Color(blot);
 
-            /*FLOW:Flow_00012 - A pass by reference taint propagation:OS Command Injection:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00012 - A pass by reference taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
-            System.Diagnostics.Process.Start(blot.Name);
+            FlowBlot.Model.Framework.Sink(blot.Name);
         }
 
         public void Color(Blot blot)
         {
-            blot.Name = System.Console.ReadLine();
+            blot.Name = FlowBlot.Model.Framework.Source();
         }
     }
 }
