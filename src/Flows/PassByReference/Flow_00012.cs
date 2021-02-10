@@ -13,8 +13,6 @@ namespace FlowBlot.Flows
         {
             Blot blot = new Blot() { Name = String.Empty };
             Color(blot);
-            Sanitize(blot);
-
 
             /*FLOW:Flow_00012 - A pass by reference taint propagation:OS Command Injection:4:FIND_ISSUE:1:
              *STEP_PATH:ABC
