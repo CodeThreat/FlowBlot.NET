@@ -15,7 +15,7 @@
                 Method2(input);
             }
 
-            /*FLOW:Flow_00044 - A source to sink complex trace order:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00044 - A source to sink complex trace order:codethreat.flowblot.benchmark:12:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(input);
