@@ -12,7 +12,7 @@ namespace FlowBlot.Flows
             Method1(blot);
 
 
-            /*FLOW:Flow_00043 - A model pass-through taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
+            /*FLOW:Flow_00043 - A model pass-through taint propagation:codethreat.flowblot.benchmark:16:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(blot.Name);

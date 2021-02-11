@@ -15,7 +15,7 @@ namespace FlowBlot.Flows
 
             string output = input.TrimAndReturn();
 
-            /*FLOW:Flow_00078 - An extension method taint propagation:codethreat.flowblot.benchmark:0+:FIND_ISSUE:1:
+            /*FLOW:Flow_00078 - An extension method taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
             *STEP_PATH:ABC
             */
             FlowBlot.Model.Framework.Sink(output);

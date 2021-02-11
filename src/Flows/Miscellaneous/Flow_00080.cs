@@ -11,7 +11,7 @@
         private void RunMe(string one, string arg)
         {
 
-            /*FLOW:Flow_00080 - A named argument method call:codethreat.flowblot.benchmark:0+:FIND_ISSUE:1:
+            /*FLOW:Flow_00080 - A named argument method call:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(arg);

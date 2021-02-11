@@ -19,7 +19,7 @@ namespace FlowBlot.Flows
 
             string output2 = ds2.getUrl();
 
-            /*FLOW:Flow_00033 - A context-sensitive points-to analysis taint propagation:codethreat.flowblot.benchmark:14:FIND_ISSUE:1:
+            /*FLOW:Flow_00033 - A context-sensitive points-to analysis taint propagation:codethreat.flowblot.benchmark:12:FIND_ISSUE:1:
             *STEP_PATH:ABC
             */
             FlowBlot.Model.Framework.Sink(output2);

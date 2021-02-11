@@ -11,7 +11,7 @@ namespace FlowBlot.Flows
             blot.Label = String.Empty;
 
 
-            /*FLOW:Flow_00019 - A setter taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00019 - A setter taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(blot.Label);
