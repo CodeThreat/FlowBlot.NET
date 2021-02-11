@@ -25,7 +25,7 @@ namespace FlowBlot
 
             object output = getMethod.Invoke(flowInstance, arguments.ToArray());
 
-            /*FLOW:Flow_00062 - A reflection taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00062 - A reflection taint propagation:codethreat.flowblot.benchmark:11:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(output.ToString());

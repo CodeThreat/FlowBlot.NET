@@ -13,7 +13,7 @@ namespace FlowBlot
             inputs.Enqueue(string.Empty);
             if (inputs != null && inputs.Count > 0)
             {
-                /*FLOW:Flow_00054 - A Queue taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
+                /*FLOW:Flow_00054 - A Queue taint propagation:codethreat.flowblot.benchmark:8:FIND_ISSUE:1:
                  *STEP_PATH:ABC
                  */
                 FlowBlot.Model.Framework.Sink(inputs.Dequeue());

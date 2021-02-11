@@ -9,7 +9,7 @@
             Pass(out input);
 
 
-            /*FLOW:Flow_00030 - An out pass by reference taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00030 - An out pass by reference taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(input);

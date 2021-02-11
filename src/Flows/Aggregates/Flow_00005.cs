@@ -14,7 +14,7 @@ namespace FlowBlot
             if (inputs != null && inputs.Count > 0)
             {
 
-                /*FLOW:Flow_00005 - A List item taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
+                /*FLOW:Flow_00005 - A List item taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
                  *STEP_PATH:ABC
                  */
                 FlowBlot.Model.Framework.Sink(inputs[0]);
