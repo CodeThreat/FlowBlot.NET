@@ -10,7 +10,7 @@ namespace FlowBlot.Flows
             Blot blot = new Blot() { Name = String.Empty };
             Color(blot);
 
-            /*FLOW:Flow_00012 - A pass by reference taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
+            /*FLOW:Flow_00012 - A pass by reference taint propagation:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(blot.Name);
