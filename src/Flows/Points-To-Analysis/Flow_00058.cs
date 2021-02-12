@@ -14,7 +14,7 @@ namespace FlowBlot
             G g = new H();
             A b = g.Id(a);
 
-            /*FLOW:Flow_00058 - An interface based alias analysis taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00058 - An interface based alias analysis taint propagation:codethreat.flowblot.benchmark:8:FIND_ISSUE:1:
               *STEP_PATH:ABC
               */
             FlowBlot.Model.Framework.Sink(b.b);

@@ -15,7 +15,7 @@ namespace FlowBlot.Flows
 
 
 
-            /*FLOW:Flow_00022 - A inter-procedural polymorphic taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00022 - A inter-procedural polymorphic taint propagation:codethreat.flowblot.benchmark:8:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(input);

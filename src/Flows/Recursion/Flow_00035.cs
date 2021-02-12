@@ -11,7 +11,7 @@ namespace FlowBlot.Flows
             input = Method1(input);
 
 
-            /*FLOW:Flow_00035 - A deep recursive taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00035 - A deep recursive taint propagation:codethreat.flowblot.benchmark:6:FIND_ISSUE:1:
             *STEP_PATH:ABC
             */
             FlowBlot.Model.Framework.Sink(input);

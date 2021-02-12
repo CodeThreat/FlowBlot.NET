@@ -12,7 +12,7 @@ namespace FlowBlot
             MProxy.Fetch fetchDelegate = new MProxy.Fetch(proxy.FetchPropagate);
             string output = fetchDelegate(input);
 
-            /*FLOW:Flow_00060 - A delegate taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
+            /*FLOW:Flow_00060 - A delegate taint propagation:codethreat.flowblot.benchmark:6:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(output);
