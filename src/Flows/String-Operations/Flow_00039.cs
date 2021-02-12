@@ -16,7 +16,7 @@
                 }
             }
 
-            /*FLOW:Flow_00039 - A StringBuilder taint propagation:codethreat.flowblot.benchmark:10:FIND_ISSUE:1:
+            /*FLOW:Flow_00039 - A StringBuilder taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(sb.ToString());

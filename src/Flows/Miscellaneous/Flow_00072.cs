@@ -14,7 +14,7 @@ namespace FlowBlot.Flows
             IWeatherService weatherService = WeatherServiceFinder.FetchProvider();
             string passThrough = weatherService.GetWeatherData(input);
 
-            /*FLOW:Flow_00072 - A 3rd-party code taint propagation:codethreat.flowblot.benchmark:9:FIND_ISSUE:1:
+            /*FLOW:Flow_00072 - A 3rd-party code taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink(passThrough);

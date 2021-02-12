@@ -13,7 +13,7 @@ namespace FlowBlot
             inputs.Add(string.Empty);
             if (inputs != null && inputs.Count > 0)
             {
-                /*FLOW:Flow_00006 - A List item FP taint propagation:codethreat.flowblot.benchmark:7:FIND_ISSUE:1:
+                /*FLOW:Flow_00006 - A List item FP taint propagation:codethreat.flowblot.benchmark:4:FIND_ISSUE:1:
                  *STEP_PATH:ABC
                  */
                 FlowBlot.Model.Framework.Sink(inputs[0]);

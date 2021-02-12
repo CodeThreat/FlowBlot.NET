@@ -6,7 +6,9 @@
         {
             try
             {
-                ThrowThat();
+                string input = FlowBlot.Model.Framework.Source();
+
+                ThrowThat(input);
             }
             catch(System.Exception e)
             {
@@ -17,11 +19,10 @@
             }
         }
 
-        public void ThrowThat()
+        public void ThrowThat(string i)
         {
-            string input = FlowBlot.Model.Framework.Source();
 
-            throw new System.Exception(input);
+            throw new System.Exception(i);
         }
 
     }

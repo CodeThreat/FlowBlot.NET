@@ -14,7 +14,7 @@ namespace FlowBlot
 
             string output = myFunc(input);
 
-            /*FLOW:Flow_00077 - An expression lambda FP taint propagation:codethreat.flowblot.benchmark:10:FIND_ISSUE:1:
+            /*FLOW:Flow_00077 - An expression lambda FP taint propagation:codethreat.flowblot.benchmark:6:FIND_ISSUE:1:
             *STEP_PATH:ABC
             */
             FlowBlot.Model.Framework.Sink(output);

@@ -24,7 +24,7 @@ namespace FlowBlot.Flows
     {
         public void Consume(object input)
         {
-            /*FLOW:Flow_00074 - A basic flow with threads:codethreat.flowblot.benchmark:8:FIND_ISSUE:1:
+            /*FLOW:Flow_00074 - A basic flow with threads:codethreat.flowblot.benchmark:5:FIND_ISSUE:1:
              *STEP_PATH:ABC
              */
             FlowBlot.Model.Framework.Sink((string)input);
