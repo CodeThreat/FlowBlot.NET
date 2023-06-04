@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://codethreat.com">
-    <img src="https://codethreat.com/images/Codethreat-Logo-kucuk-logo-p-800.png" alt="Logo" width="259" height="39">
+    <img src="https://www.codethreat.com/_next/static/media/ct-logo.0cc6530f.svg" alt="Logo" width="259" height="39">
   </a>
 
   <h3 align="center">FlowBlot.NET</h3>
