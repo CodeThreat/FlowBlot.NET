@@ -1,0 +1,41 @@
+run-name: CodeThreat Scan Task
+
+on:
+  # Trigger scan when pushing in master or pull requests, and when creating
+  # a pull request.
+  push:
+        branches:
+        - main
+        - master
+  pull_request:
+        branches:
+        - main
+        - master
+jobs:
+  codethreat_scanner:
+    runs-on: ubuntu-latest
+    name: Codethreat Scan
+    steps:
+      - name: Check Out Source Code
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+      - name: CodeThreat Github Action Scanner
+        uses: CodeThreat/codethreat-scan-action@master
+
+        env:
+           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           CT_SERVER: ${{ secrets.CT_SERVER }}
+           ORGNAME: ${{ secrets.ORGNAME }}
+        with: 
+            FAILED_ARGS: |
+                 - max_number_of_critical: 1500
+                 - max_number_of_high: 1500
+                 - condition: 'OR'
+                 - automerge: false
+                 - sync_scan: true
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: codethreat.sarif.json
